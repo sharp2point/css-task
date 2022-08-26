@@ -51,55 +51,65 @@
               <p>Select the type of investor you are below.</p>
             </header>
             <nav>
-              <ul>
-                <li class="individual">
-                  <input type="radio" name="data-select" id="individual"/><span class="value">Individual</span
-                  ><span
+              <div class="select-item individual">
+                <input type="radio" name="data-select" id="individual" />
+                <label for="individual" class="value"
+                  >Individual
+                  <span
                     class="helper"
                     data-val="I'm natural person investing on my own behalf as a sole owner, join tenant or tenant in common"
                     >i</span
                   >
-                </li>
-                <li class="buisiness">
-                  <input type="radio" name="data-select" id="buisiness" />
-                  <span class="value">Business</span
-                  ><span
+                </label>
+              </div>
+
+              <div class="select-item buisiness">
+                <input type="radio" name="data-select" id="buisiness" />
+                <label for="buisiness" class="value"
+                  >Business
+                  <span
                     class="helper"
                     data-val="Buisnessman man who works in business, especially one who has a high position in a company"
                     >i</span
                   >
-                </li>
-                <li class="ira">
-                  <input type="radio" name="data-select" id="ira"  />
-                  <span class="value">IRA</span
-                  ><span
+                </label>
+              </div>
+
+              <div class="select-item ira">
+                <input type="radio" name="data-select" id="ira" />
+                <label for="ira" class="value"
+                  >IRA
+                  <span
                     class="helper"
                     data-val="Organisations by this name have been dedicated to irredentism through Irish republicanism"
                     >i</span
                   >
-                </li>
-                <li class="trust">
-                  <input type="radio" name="data-select"  id="trust" />
-                  <span class="value">Trust</span
-                  ><span
+                </label>
+              </div>
+
+              <div class="select-item trust">
+                <input type="radio" name="data-select" id="trust" />
+                <label for="trust" class="value"
+                  >Trust
+                  <span
                     class="helper"
                     data-val="A trust is a group of people or an organization that has control of an amount of money or property and invests it on behalf of other people or as a charity"
                     >i</span
                   >
-                </li>
-              </ul>
+                </label>
+              </div>
             </nav>
           </div>
           <div class="reg-agree">
             <input type="checkbox" />
             I agree to the terms and receiving notification from iintoo
-            <a href="#">View full terms</a>            
+            <a href="#">View full terms</a>
           </div>
           <div class="submit">
-            <input type="submit" value="Create Account" />
+            <button type="submit">Create Account</button>
           </div>
-          
         </form>
+        
       </div>
     </main>
   </body>

@@ -199,7 +199,6 @@ main {
 }
 .content .reg-form .user-data header {
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -214,22 +213,24 @@ main {
   font-size: 0.8rem;
   color: var(--color-gray10);
 }
+/* -------------- MENU RADIOBUTTON -----------------*/
 .content .reg-form .user-data nav {
-  flex: 2;
-}
-.content .reg-form .user-data nav ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
+  flex-direction: row;
 }
-.content .reg-form .user-data nav ul li {
+.content .reg-form .user-data nav div.select-item {
   display: flex;
   justify-content: flex-start;
   align-items: end;
+  gap:5px;
   flex: 1;
 }
-.content .reg-form .user-data nav ul li input[type="radio"] {
+.content .reg-form .user-data nav div.select-item label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+  }
+.content .reg-form .user-data nav div.select-item input[type="radio"] {
   appearance: none;
   width: 15px;
   height: 15px;
@@ -238,21 +239,21 @@ main {
   background: white;
   transition: 0.5s;
 }
-.content .reg-form .user-data nav ul li input[type="radio"]:checked {
+.content .reg-form .user-data nav div.select-item input[type="radio"]:checked {
   border: 5px solid var(--color-blue);
 }
 
-.content .reg-form .user-data nav ul li.ira {
+.content .reg-form .user-data nav div.ira {
   flex: 0.9;
 }
-.content .reg-form .user-data nav ul li.trust {
+.content .reg-form .user-data nav div.trust {
   flex: 1.2;
 }
-.content .reg-form .user-data nav ul li .value {
+.content .reg-form .user-data nav div.select-item .value {
   font-size: 0.8rem;
   margin-left: 5px;
 }
-.content .reg-form .user-data nav ul li .helper {
+.content .reg-form .user-data nav div.select-item .helper {
   display: block;
   width: 10px;
   height: 10px;
@@ -264,14 +265,14 @@ main {
   border: 1px solid var(--color-gray50);
   margin-left: 2px;
 }
-.content .reg-form .user-data nav ul li .helper::before {
+.content .reg-form .user-data nav div.select-item .helper::before {
   content: "";
   text-align: left;
   line-height: 1rem;
   font-size: 0.7rem;
   display: none;
 }
-.content .reg-form .user-data nav ul li .helper:hover::before {
+.content .reg-form .user-data nav div.select-item .helper:hover::before {
   content: attr(data-val);
   position: relative;
   display: block;
@@ -305,7 +306,7 @@ main {
   flex: 0.5;
   width: var(--inblock-width);
 }
-.content .reg-form .submit input[type="submit"] {
+.content .reg-form .submit button {
   background: var(--color-blue);
   color: white;
   width: 180px;
@@ -316,7 +317,7 @@ main {
   line-height: 1.2rem;
   transition: 0.5s;
 }
-.content .reg-form .submit input[type="submit"]:hover {
+.content .reg-form .submit button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 5px var(--color-blue), 0 0 5px var(--color-base);
 }
@@ -370,7 +371,7 @@ main {
     justify-content: center;
     align-items: center;
   }
-  .content .reg-form .user-data nav ul {
+  .content .reg-form .user-data nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -391,18 +392,18 @@ main {
     width: 50%;
   }
 }
-@media screen and (max-width:550px){
-    main{
-        flex-direction: column;
-        gap:20px;
-    }
-    .baner{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    .baner img.logo {
-        height: 70px;
-      }
+@media screen and (max-width: 550px) {
+  main {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .baner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .baner img.logo {
+    height: 70px;
+  }
 }
