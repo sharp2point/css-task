@@ -1,0 +1,408 @@
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Regular.woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Thin.woff");
+  font-weight: 100;
+}
+
+:root {
+  --color-fon: #eff6ff;
+  --color-base: #2a4a5c;
+  --color-fb: #255a9b;
+  --color-ln: #0076b6;
+  --color-blue: #1c7fc1;
+  --color-gray10: #515658;
+  --color-gray50: #96a5b1;
+  --color-gray100: #afafaf;
+  --color-gary200: #eeeeee;
+  --color-white: #ffffff;
+  --inblock-width: 80%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Barlow";
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-fon);
+  width: 1200px;
+  height: 800px;
+}
+.baner {
+  flex: 1;
+  height: 100%;
+  background-color: var(--color-blue);
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+}
+.baner img.logo {
+  position: relative;
+  top: 30px;
+  left: 40px;
+  height: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1;
+  height: 100%;
+}
+
+/*----------- SOCIAL ---------------*/
+.content .social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex: 2;
+}
+
+/*----------- SOCIAL HEADER ---------*/
+.content .social header {
+  display: flex;
+  width: var(--inblock-width);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: black;
+  line-height: 2rem;
+}
+.content .social header h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.content .social header p {
+  font-size: 1rem;
+  font-weight: 100;
+  color: var(--color-gray10);
+}
+
+/*----------- SOCIAL NAVIGATE ---------*/
+.content .social nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+  width: var(--inblock-width);
+}
+.content .social nav a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1;
+  height: 2rem;
+  font-size: 0.7em;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: 0.5s;
+}
+.content .social nav a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px var(--color-blue), 0 0 5px var(--color-base);
+}
+.content .social nav a.fb {
+  background: var(--color-fb);
+}
+
+.content .social nav a.ln {
+  background: var(--color-ln);
+}
+
+.content .social nav a img {
+  height: 15px;
+  margin-left: 5%;
+}
+.content .social nav a span {
+  letter-spacing: 0.01em;
+  margin-right: 22%;
+}
+/*---------------- OR LINE DIVIDER------------*/
+.or-line-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: black;
+  font-size: 0.7rem;
+  width: 100%;
+}
+.or-line-divider hr {
+  width: 20%;
+  color: var(--color-gary200);
+}
+/* --------------------- FORM ---------------------- */
+.content .reg-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex: 2.5;
+}
+/*----------- FORM -> USER-CONTACT ---------------*/
+.content .reg-form .user-contact {
+  display: flex;
+  flex: 0.8;
+  justify-content: space-between;
+  gap: 20px;
+  width: var(--inblock-width);
+}
+.content .reg-form .user-contact .inp-before {
+  flex: 1;
+}
+.content .reg-form .user-contact .inp-before input {
+  height: 2.8rem;
+  width: 100%;
+  font-size: 1rem;
+  padding-top: 0.8rem;
+  padding-left: 5px;
+  border: 1px solid #ccc;
+  transition: 0.5s;
+  outline: none;
+}
+.content .reg-form .user-contact .inp-before input:focus {
+  border-left: 3px solid var(--color-blue);
+}
+.content .reg-form .user-contact .inp-before::before {
+  position: relative;
+  content: attr(name);
+  color: var(--color-gray100);
+  font-size: 0.7rem;
+  top: 18px;
+  left: 5px;
+}
+/*------------ USER-DATA -------------------*/
+.content .reg-form .user-data {
+  display: flex;
+  flex: 0.8;
+  flex-direction: column;
+  justify-content: space-around;
+  width: var(--inblock-width);
+}
+.content .reg-form .user-data header {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: black;
+  line-height: 1.5rem;
+}
+.content .reg-form .user-data header h1 {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.content .reg-form .user-data header p {
+  font-size: 0.8rem;
+  color: var(--color-gray10);
+}
+.content .reg-form .user-data nav {
+  flex: 2;
+}
+.content .reg-form .user-data nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.content .reg-form .user-data nav ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+  flex: 1;
+}
+.content .reg-form .user-data nav ul li input[type="radio"] {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background: white;
+  transition: 0.5s;
+}
+.content .reg-form .user-data nav ul li input[type="radio"]:checked {
+  border: 5px solid var(--color-blue);
+}
+
+.content .reg-form .user-data nav ul li.ira {
+  flex: 0.9;
+}
+.content .reg-form .user-data nav ul li.trust {
+  flex: 1.2;
+}
+.content .reg-form .user-data nav ul li .value {
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+.content .reg-form .user-data nav ul li .helper {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  font-size: 6px;
+  line-height: 8px;
+  text-align: center;
+  color: var(--color-gray50);
+  border: 1px solid var(--color-gray50);
+  margin-left: 2px;
+}
+.content .reg-form .user-data nav ul li .helper::before {
+  content: "";
+  text-align: left;
+  line-height: 1rem;
+  font-size: 0.7rem;
+  display: none;
+}
+.content .reg-form .user-data nav ul li .helper:hover::before {
+  content: attr(data-val);
+  position: relative;
+  display: block;
+  top: 30px;
+  left: -100px;
+  min-width: 200px;
+  min-height: 50px;
+  padding: 0.2rem;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px var(--color-gray50);
+  opacity: 0.9;
+}
+
+/* ---------- AGREE ---------------- */
+.content .reg-form .reg-agree {
+  display: flex;
+  flex: 1;
+  justify-content: start;
+  gap: 10px;
+  align-items: center;
+  width: var(--inblock-width);
+  color: var(--color-gray100);
+  font-size: 0.7rem;
+}
+.content .reg-form .reg-agree a {
+  color: var(--color-blue);
+}
+
+.content .reg-form .submit {
+  flex: 0.5;
+  width: var(--inblock-width);
+}
+.content .reg-form .submit input[type="submit"] {
+  background: var(--color-blue);
+  color: white;
+  width: 180px;
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  line-height: 1.2rem;
+  transition: 0.5s;
+}
+.content .reg-form .submit input[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px var(--color-blue), 0 0 5px var(--color-base);
+}
+
+/*------- MEDIA QUERY --------------- */
+@media screen and (max-width: 920px) {
+  .content {
+    flex: 2;
+  }
+}
+@media screen and (max-width: 730px) {
+  .content .social nav {
+    flex-direction: column;
+  }
+  .content .social nav a {
+    min-width: 70%;
+    min-height: 2rem;
+  }
+}
+@media screen and (max-width: 690px) {
+  .content .reg-form .user-contact {
+    flex-direction: column;
+    width: 70%;
+    gap: 0px;
+    flex: 0.5;
+  }
+  .content .social header {
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5rem;
+    gap: 10px;
+  }
+  .content .social header p {
+    text-align: center;
+  }
+  /*------------ USER DATA ---------------*/
+  .content .reg-form {
+    gap: 20px;
+  }
+  .content .reg-form .user-data {
+    display: flex;
+    flex: 0.8;
+    flex-direction: column;
+    gap: 20px;
+    width: 70%;
+  }
+  .content .reg-form .user-data header {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .content .reg-form .user-data nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: flex-start;
+    list-style: none;
+  }
+
+  /* ---------- AGREE ---------------- */
+  .content .reg-form .reg-agree {
+    width: 70%;
+  }
+
+  .content .reg-form .submit {
+    flex: 0.5;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+}
+@media screen and (max-width:550px){
+    main{
+        flex-direction: column;
+        gap:20px;
+    }
+    .baner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .baner img.logo {
+        height: 70px;
+      }
+}

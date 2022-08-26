@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IINTTOO - invest together</title>
+    <link rel="stylesheet" href="./css/base.css" />
+  </head>
+  <body>
+    <main>
+      <div class="baner">
+        <img class="logo" src="./img/logo.svg" alt="logo IINTOO" />
+      </div>
+
+      <div class="content">
+        <div class="social">
+          <header>
+            <h1>Get iintoo it today</h1>
+            <p>The is no charge or obligation upon registration.</p>
+          </header>
+          <nav>
+            <a class="fb" href="#facebook">
+              <img src="./img/facebook.svg" alt="register Facebook" />
+              <span>Register with Facebook</span>
+            </a>
+            <a class="ln" href="#linkedin">
+              <img src="./img/linkedin.svg" alt="register LinkedIn" />
+              <span>Register with LinkedIn</span>
+            </a>
+          </nav>
+          <div class="or-line-divider">
+            <hr />
+            OR
+            <hr />
+          </div>
+        </div>
+
+        <form action="post" class="reg-form">
+          <div class="user-contact">
+            <div class="inp-before" name="Email">
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="inp-before" name="Phone">
+              <input type="text" name="phone" id="phone" required />
+            </div>
+          </div>
+          <div class="user-data">
+            <header>
+              <h1>What type investor are you?</h1>
+              <p>Select the type of investor you are below.</p>
+            </header>
+            <nav>
+              <ul>
+                <li class="individual">
+                  <input type="radio" name="data-select" id="individual"/><span class="value">Individual</span
+                  ><span
+                    class="helper"
+                    data-val="I'm natural person investing on my own behalf as a sole owner, join tenant or tenant in common"
+                    >i</span
+                  >
+                </li>
+                <li class="buisiness">
+                  <input type="radio" name="data-select" id="buisiness" />
+                  <span class="value">Business</span
+                  ><span
+                    class="helper"
+                    data-val="Buisnessman man who works in business, especially one who has a high position in a company"
+                    >i</span
+                  >
+                </li>
+                <li class="ira">
+                  <input type="radio" name="data-select" id="ira"  />
+                  <span class="value">IRA</span
+                  ><span
+                    class="helper"
+                    data-val="Organisations by this name have been dedicated to irredentism through Irish republicanism"
+                    >i</span
+                  >
+                </li>
+                <li class="trust">
+                  <input type="radio" name="data-select"  id="trust" />
+                  <span class="value">Trust</span
+                  ><span
+                    class="helper"
+                    data-val="A trust is a group of people or an organization that has control of an amount of money or property and invests it on behalf of other people or as a charity"
+                    >i</span
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="reg-agree">
+            <input type="checkbox" />
+            I agree to the terms and receiving notification from iintoo
+            <a href="#">View full terms</a>            
+          </div>
+          <div class="submit">
+            <input type="submit" value="Create Account" />
+          </div>
+          
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
